@@ -1,16 +1,12 @@
 """
-DaddyLive provider - TRASFORMA la pagina web in m3u8 reale.
-
-Catena: watch.php → player → iframe embed → _econfig → m3u8 VERO (CDN)
-Direct-first: funziona da GitHub Actions (dlive.sx non blocca sempre).
-Fallback proxy CORS pubblici gratuiti se il direct fallisce.
+DaddyLive provider - estrae l'm3u8 reale da bembed.sbs e lo instrada
+attraverso il Cloudflare Worker che spacchetta i segmenti travestiti.
 """
 
 import re
-import base64
-import json
+import time
 import logging
-from urllib.parse import quote, urlparse
+from urllib.parse import quote
 
 import requests
 from requests.adapters import HTTPAdapter
@@ -20,7 +16,11 @@ logger = logging.getLogger(__name__)
 
 BASE = "https://dlive.sx"
 MIRRORS = ["https://dlive.sx", "https://dlstreams.st"]
-EMBED_REFERER = "https://assetrage.net/"
+EMBED_TEMPLATE = "https://bembed.sbs/premiumtv/daddy.php?id={cid}"
+PLAYER_REFERER = "https://dlive.sx/stream/stream-{cid}.php"
+
+# IL TUO WORKER CLOUDFLARE
+WORKER_BASE = "https://daddy-deploy.simo-scorrano-11.workers.dev"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
@@ -28,7 +28,7 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-# Fallback gratuiti SOLO se il direct fallisce (GitHub IP bloccato quel giorno)
+# Fallback gratuiti solo se il direct fallisce (GitHub IP bloccati)
 DISCOVERY_PROXIES = [
     lambda u: "https://api.allorigins.win/raw?url=" + quote(u, safe=""),
     lambda u: "https://api.codetabs.com/v1/proxy?quest=" + u,
@@ -49,51 +49,30 @@ def _get_session() -> requests.Session:
     return s
 
 
-def _is_discovery_host(url: str) -> bool:
-    host = urlparse(url).netloc.lower()
-    return ("dlive" in host) or ("assetrage" in host)
+def _fetch(url: str, referer: str = None, timeout: int = 12, must_contain: str = None) -> requests.Response:
+    """Direct prima; fallback proxy CORS pubblici."""
+    headers = dict(HEADERS)
+    if referer:
+        headers["Referer"] = referer
 
-
-def _fetch(url: str, timeout: int = 12) -> requests.Response:
-    """Direct prima; fallback proxy pubblici solo per pagine dlive/assetrage"""
     try:
-        r = requests.get(url, headers=HEADERS, timeout=timeout)
+        r = requests.get(url, headers=headers, timeout=timeout)
         if r.status_code == 200 and len(r.content) > 50:
-            return r
+            if must_contain is None or must_contain in r.text:
+                return r
     except Exception:
         pass
 
-    if not _is_discovery_host(url):
-        raise RuntimeError(f"Host non raggiungibile: {url[:60]}")
-
-    last_err = None
     for make_proxy in DISCOVERY_PROXIES:
         try:
-            r = requests.get(make_proxy(url), headers=HEADERS, timeout=timeout + 5)
+            r = requests.get(make_proxy(url), headers=headers, timeout=timeout + 5)
             if r.status_code == 200 and len(r.text) > 50:
-                return r
-            last_err = f"HTTP {r.status_code}"
-        except Exception as e:
-            last_err = str(e)
-    raise RuntimeError(f"Discovery fallita ({url[:60]}): {last_err}")
+                if must_contain is None or must_contain in r.text:
+                    return r
+        except Exception:
+            continue
 
-
-def _decode_econfig(encoded: str) -> dict:
-    """base64 → split 4 parti → rimuovi char[3] → riordina [2,0,3,1] → base64 → JSON"""
-    raw = base64.b64decode(encoded).decode("utf-8", errors="ignore")
-    parts = None
-    for sep in ["|", ",", ";", ":"]:
-        p = raw.split(sep)
-        if len(p) == 4:
-            parts = p
-            break
-    if parts is None:
-        parts = re.split(r"[^A-Za-z0-9+/=]+", raw)
-    if len(parts) != 4:
-        raise ValueError(f"_econfig: attese 4 parti, trovate {len(parts)}")
-    cleaned = [p[:3] + p[4:] if len(p) > 3 else p for p in parts]
-    reordered = cleaned[2] + cleaned[0] + cleaned[3] + cleaned[1]
-    return json.loads(base64.b64decode(reordered).decode("utf-8"))
+    raise RuntimeError(f"Fetch fallita: {url[:70]}")
 
 
 def fetch_channel_list() -> dict:
@@ -144,41 +123,20 @@ def find_channel_id(channels: dict, query: str) -> int:
 
 
 def _extract_real_stream(cid: int) -> str:
-    """LA MAGIA: pagina web → m3u8 vero"""
-    try:
-        _fetch(f"{BASE}/watch.php?id={cid}", timeout=8)
-    except Exception:
-        pass
+    """bembed.sbs contiene const SRC con l'm3u8 vero."""
+    embed_url = EMBED_TEMPLATE.format(cid=cid)
+    referer = PLAYER_REFERER.format(cid=cid)
 
-    player_html = _fetch(f"{BASE}/cast/stream-{cid}.php").text
+    html = _fetch(embed_url, referer=referer, must_contain="const SRC").text
 
-    m = re.search(
-        r'iframe[^>]+src=["\'](https?://[^"\']+)["\']',
-        player_html, re.IGNORECASE
-    )
+    m = re.search(r'const\s+SRC\s*=\s*"([^"]+?\.m3u8)"', html)
     if not m:
-        m3 = re.search(r'https?://[^\s"\'<>]+\.m3u8[^\s"\'<>]*', player_html)
-        if m3:
-            return m3.group(0)
-        raise RuntimeError("Nessun iframe/m3u8 nel player")
+        raise RuntimeError(f"const SRC non trovato per canale {cid}")
 
-    embed_html = _fetch(m.group(1)).text
-
-    m2 = re.search(r'_econfig\s*=\s*["\']([^"\']+)["\']', embed_html)
-    if m2:
-        try:
-            cfg = _decode_econfig(m2.group(1))
-            for key in ("stream_url", "url", "src", "file", "hls"):
-                if cfg.get(key) and ".m3u8" in str(cfg[key]):
-                    return str(cfg[key])
-        except Exception:
-            pass
-
-    m3 = re.search(r'https?://[^\s"\'<>]+\.m3u8[^\s"\'<>]*', embed_html)
-    if m3:
-        return m3.group(0)
-
-    raise RuntimeError(f"Stream non trovato per canale {cid}")
+    src = m.group(1)
+    sep = "&" if "?" in src else "?"
+    src = f"{src}{sep}_={int(time.time() * 1000)}"
+    return src
 
 
 def get_stream(channel_name: str) -> dict:
@@ -186,15 +144,14 @@ def get_stream(channel_name: str) -> dict:
     cid = find_channel_id(channels, channel_name)
     real_url = _extract_real_stream(cid)
 
-    logger.info("STREAM REALE: %s", real_url[:80])
+    # Instrada TUTTO attraverso il worker (manifest + segmenti)
+    worker_url = f"{WORKER_BASE}/?u={quote(real_url, safe='')}"
+
+    logger.info("STREAM VIA WORKER: %s", worker_url[:80])
 
     return {
-        "url": real_url,
-        "headers": {
-            "User-Agent": HEADERS["User-Agent"],
-            "Referer": EMBED_REFERER,
-            "Origin": "https://assetrage.net",
-        },
+        "url": worker_url,
+        "headers": {},  # Il worker gestisce tutto da solo
         "source": "daddylive",
         "channel_id": cid,
     }

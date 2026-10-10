@@ -211,7 +211,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "error",
-          "error": "Discovery fallita (https://dlive.sx/cast/stream-878.php): HTTP 429"
+          "error": "Stream non trovato per canale 878"
         }
       ]
     },
@@ -224,7 +224,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "error",
-          "error": "Discovery fallita (https://dlive.sx/cast/stream-879.php): HTTP 429"
+          "error": "Stream non trovato per canale 879"
         }
       ]
     }

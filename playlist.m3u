@@ -2,68 +2,119 @@
 #EXTINF:-1 tvg-id="Sky Sport 24 Daddy" tvg-name="Sky Sport 24 Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-24-it.png" group-title="Italy",Sky Sport 24 Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=869
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-869.php
 #EXTINF:-1 tvg-id="Sky Sport Uno Daddy" tvg-name="Sky Sport Uno Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-uno-it.png" group-title="Italy",Sky Sport Uno Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=461
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-461.php
 #EXTINF:-1 tvg-id="Sky Sport Calcio Daddy" tvg-name="Sky Sport Calcio Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-calcio-it.png" group-title="Italy",Sky Sport Calcio Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=870
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-870.php
 #EXTINF:-1 tvg-id="Sky Sport Tennis Daddy" tvg-name="Sky Sport Tennis Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-tennis-it.png" group-title="Italy",Sky Sport Tennis Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=576
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-576.php
 #EXTINF:-1 tvg-id="Sky Sport Arena Daddy" tvg-name="Sky Sport Arena Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-arena-it.png" group-title="Italy",Sky Sport Arena Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=462
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-462.php
 #EXTINF:-1 tvg-id="Sky Sport Basket Daddy" tvg-name="Sky Sport Basket Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-nba-it.png" group-title="Italy",Sky Sport Basket Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=875
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-875.php
 #EXTINF:-1 tvg-id="Sky Sport Max Daddy" tvg-name="Sky Sport Max Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-max-it.png" group-title="Italy",Sky Sport Max Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=460
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-460.php
 #EXTINF:-1 tvg-id="Sky Sport F1 Daddy" tvg-name="Sky Sport F1 Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-f1-it.png" group-title="Italy",Sky Sport F1 Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=577
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-577.php
 #EXTINF:-1 tvg-id="Sky Sport MotoGP Daddy" tvg-name="Sky Sport MotoGP Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-motogp-it.png" group-title="Italy",Sky Sport MotoGP Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=575
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-575.php
 #EXTINF:-1 tvg-id="Sky Sport Golf Daddy" tvg-name="Sky Sport Golf Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-golf-it.png" group-title="Italy",Sky Sport Golf Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=574
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-574.php
 #EXTINF:-1 tvg-id="Sky Sport 251 Daddy" tvg-name="Sky Sport 251 Daddy" tvg-logo="https://iili.io/dH9SdOX.png" group-title="Italy",Sky Sport 251 Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=871
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-871.php
 #EXTINF:-1 tvg-id="Sky Sport 252 Daddy" tvg-name="Sky Sport 252 Daddy" tvg-logo="https://iili.io/dH9SJRt.png" group-title="Italy",Sky Sport 252 Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=872
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-872.php
 #EXTINF:-1 tvg-id="Sky Sport 253 Daddy" tvg-name="Sky Sport 253 Daddy" tvg-logo="https://iili.io/dH9SHJI.png" group-title="Italy",Sky Sport 253 Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=873
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-873.php
 #EXTINF:-1 tvg-id="Sky Sport 254 Daddy" tvg-name="Sky Sport 254 Daddy" tvg-logo="https://iili.io/dH98yUN.png" group-title="Italy",Sky Sport 254 Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=874
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-874.php
 #EXTINF:-1 tvg-id="DAZN 1 Daddy" tvg-name="DAZN 1 Daddy" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/DAZN_1_logo.png" group-title="Italy",DAZN 1 Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=877
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-877.php
 #EXTINF:-1 tvg-id="Eurosport 1 Daddy" tvg-name="Eurosport 1 Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/spain/eurosport-1-es.png" group-title="Italy",Eurosport 1 Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=878
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-878.php
 #EXTINF:-1 tvg-id="Eurosport 2 Daddy" tvg-name="Eurosport 2 Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/spain/eurosport-2-es.png" group-title="Italy",Eurosport 2 Daddy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://dlive.sx/watch.php?id=879
+#EXTVLCOPT:http-origin=https://dlive.sx
+#EXTVLCOPT:http-header=Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+#EXTVLCOPT:http-header=Accept-Language:it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7
 https://dlive.sx/cast/stream-879.php

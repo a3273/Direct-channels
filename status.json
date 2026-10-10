@@ -3,8 +3,8 @@
     "channels_total": 17,
     "channels_enabled": 17,
     "streams_total": 17,
-    "streams_generated": 17,
-    "streams_failed": 0
+    "streams_generated": 0,
+    "streams_failed": 17
   },
   "channels": {
     "Sky Sport 24 Daddy": {
@@ -15,8 +15,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-869.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 869"
         }
       ]
     },
@@ -28,8 +28,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-461.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 461"
         }
       ]
     },
@@ -41,8 +41,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-870.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 870"
         }
       ]
     },
@@ -54,8 +54,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-576.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 576"
         }
       ]
     },
@@ -67,8 +67,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-462.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 462"
         }
       ]
     },
@@ -80,8 +80,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-875.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 875"
         }
       ]
     },
@@ -93,8 +93,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-460.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 460"
         }
       ]
     },
@@ -106,8 +106,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-577.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 577"
         }
       ]
     },
@@ -119,8 +119,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-575.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 575"
         }
       ]
     },
@@ -132,8 +132,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-574.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 574"
         }
       ]
     },
@@ -145,8 +145,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-871.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 871"
         }
       ]
     },
@@ -158,8 +158,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-872.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 872"
         }
       ]
     },
@@ -171,8 +171,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-873.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 873"
         }
       ]
     },
@@ -184,8 +184,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-874.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 874"
         }
       ]
     },
@@ -197,8 +197,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-877.php"
+          "status": "error",
+          "error": "Stream non trovato per canale 877"
         }
       ]
     },
@@ -210,8 +210,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-878.php"
+          "status": "error",
+          "error": "Discovery fallita (https://dlive.sx/cast/stream-878.php): HTTP 429"
         }
       ]
     },
@@ -223,8 +223,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://dlive.sx/cast/stream-879.php"
+          "status": "error",
+          "error": "Discovery fallita (https://dlive.sx/cast/stream-879.php): HTTP 429"
         }
       ]
     }

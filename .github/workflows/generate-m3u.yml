@@ -1,0 +1,45 @@
+name: Generate M3U Playlist
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-m3u
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install requests
+
+      - name: Generate M3U
+        run: |
+          find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
+          python -B generate_m3u.py
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull --rebase --autostash || true
+          git add -f playlist.m3u status.json
+          git commit -m "Update playlist $(date -u +%H:%M) [skip ci]" --allow-empty
+          git push || (git pull --rebase --autostash && git push)

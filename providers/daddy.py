@@ -1,5 +1,5 @@
 """
-DaddyLive provider - connessione DIRETTA (senza proxy)
+DaddyLive provider - connessione DIRETTA con header completi da browser
 """
 
 import re
@@ -14,11 +14,22 @@ logger = logging.getLogger(__name__)
 BASE = "https://dlive.sx"
 MIRRORS = ["https://dlive.sx", "https://dlstreams.st"]
 
+# Header completi che simulano Chrome reale
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Cache-Control": "max-age=0",
+    "DNT": "1",
     "Referer": f"{BASE}/",
+    "Origin": BASE,
 }
 
 _channel_cache = None
@@ -98,7 +109,7 @@ def find_channel_id(channels: dict, query: str) -> int:
 
 
 def get_stream(channel_name: str) -> dict:
-    """Dato nome canale, ritorna URL diretto del player"""
+    """Dato nome canale, ritorna URL diretto del player con header completi"""
     session = _get_session()
     channels = fetch_channel_list(session)
     cid = find_channel_id(channels, channel_name)
@@ -108,8 +119,14 @@ def get_stream(channel_name: str) -> dict:
     return {
         "url": stream_url,
         "headers": {
-            "Referer": f"{BASE}/",
             "User-Agent": HEADERS["User-Agent"],
+            "Referer": f"{BASE}/watch.php?id={cid}",
+            "Origin": BASE,
+            "Accept": HEADERS["Accept"],
+            "Accept-Language": HEADERS["Accept-Language"],
+            "Sec-Fetch-Dest": "iframe",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "same-origin",
         },
         "source": "daddylive",
         "channel_id": cid,
@@ -128,4 +145,4 @@ def resolve(channel: dict, stream: dict) -> dict:
         "proxy": "direct",
         "proxy_required": False,
     }
-  
+    

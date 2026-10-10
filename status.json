@@ -1,9 +1,9 @@
 {
   "summary": {
-    "channels_total": 17,
-    "channels_enabled": 17,
-    "streams_total": 17,
-    "streams_generated": 17,
+    "channels_total": 13,
+    "channels_enabled": 13,
+    "streams_total": 13,
+    "streams_generated": 13,
     "streams_failed": 0
   },
   "channels": {
@@ -16,7 +16,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium869%2Findex.m3u8%3F_%3D1791658361543"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium869%2Findex.m3u8%3F_%3D1791658796276"
         }
       ]
     },
@@ -29,7 +29,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium461%2Findex.m3u8%3F_%3D1791658362897"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium461%2Findex.m3u8%3F_%3D1791658797672"
         }
       ]
     },
@@ -42,7 +42,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium870%2Findex.m3u8%3F_%3D1791658364161"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium870%2Findex.m3u8%3F_%3D1791658799068"
         }
       ]
     },
@@ -55,7 +55,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium576%2Findex.m3u8%3F_%3D1791658365489"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium576%2Findex.m3u8%3F_%3D1791658800624"
         }
       ]
     },
@@ -68,7 +68,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium462%2Findex.m3u8%3F_%3D1791658367047"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium462%2Findex.m3u8%3F_%3D1791658802017"
         }
       ]
     },
@@ -81,7 +81,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium875%2Findex.m3u8%3F_%3D1791658368330"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium875%2Findex.m3u8%3F_%3D1791658803249"
         }
       ]
     },
@@ -94,7 +94,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium460%2Findex.m3u8%3F_%3D1791658369682"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium460%2Findex.m3u8%3F_%3D1791658804562"
         }
       ]
     },
@@ -107,7 +107,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium577%2Findex.m3u8%3F_%3D1791658371132"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium577%2Findex.m3u8%3F_%3D1791658806024"
         }
       ]
     },
@@ -120,7 +120,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium575%2Findex.m3u8%3F_%3D1791658372474"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium575%2Findex.m3u8%3F_%3D1791658807345"
         }
       ]
     },
@@ -133,59 +133,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium574%2Findex.m3u8%3F_%3D1791658373749"
-        }
-      ]
-    },
-    "Sky Sport 251 Daddy": {
-      "enabled": true,
-      "streams": [
-        {
-          "name": "DaddyLive",
-          "provider": "daddy",
-          "priority": 1,
-          "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium871%2Findex.m3u8%3F_%3D1791658375129"
-        }
-      ]
-    },
-    "Sky Sport 252 Daddy": {
-      "enabled": true,
-      "streams": [
-        {
-          "name": "DaddyLive",
-          "provider": "daddy",
-          "priority": 1,
-          "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium872%2Findex.m3u8%3F_%3D1791658376392"
-        }
-      ]
-    },
-    "Sky Sport 253 Daddy": {
-      "enabled": true,
-      "streams": [
-        {
-          "name": "DaddyLive",
-          "provider": "daddy",
-          "priority": 1,
-          "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium873%2Findex.m3u8%3F_%3D1791658377676"
-        }
-      ]
-    },
-    "Sky Sport 254 Daddy": {
-      "enabled": true,
-      "streams": [
-        {
-          "name": "DaddyLive",
-          "provider": "daddy",
-          "priority": 1,
-          "source_url_configured": false,
-          "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium874%2Findex.m3u8%3F_%3D1791658378918"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium574%2Findex.m3u8%3F_%3D1791658808768"
         }
       ]
     },
@@ -198,7 +146,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium877%2Findex.m3u8%3F_%3D1791658380317"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium877%2Findex.m3u8%3F_%3D1791658810109"
         }
       ]
     },
@@ -211,7 +159,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium878%2Findex.m3u8%3F_%3D1791658381591"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium878%2Findex.m3u8%3F_%3D1791658811447"
         }
       ]
     },
@@ -224,7 +172,7 @@
           "priority": 1,
           "source_url_configured": false,
           "status": "resolved",
-          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium879%2Findex.m3u8%3F_%3D1791658382871"
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium879%2Findex.m3u8%3F_%3D1791658812759"
         }
       ]
     }

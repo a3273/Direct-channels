@@ -81,38 +81,6 @@
       ]
     },
     {
-      "name": "Sky Sport 251 Daddy",
-      "logo": "https://iili.io/dH9SdOX.png",
-      "group": "Italy",
-      "streams": [
-        {"name": "DaddyLive", "provider": "daddy", "priority": 1, "query": "Sky Calcio 1 (251) Italy", "url": ""}
-      ]
-    },
-    {
-      "name": "Sky Sport 252 Daddy",
-      "logo": "https://iili.io/dH9SJRt.png",
-      "group": "Italy",
-      "streams": [
-        {"name": "DaddyLive", "provider": "daddy", "priority": 1, "query": "Sky Calcio 2 (252) Italy", "url": ""}
-      ]
-    },
-    {
-      "name": "Sky Sport 253 Daddy",
-      "logo": "https://iili.io/dH9SHJI.png",
-      "group": "Italy",
-      "streams": [
-        {"name": "DaddyLive", "provider": "daddy", "priority": 1, "query": "Sky Calcio 3 (253) Italy", "url": ""}
-      ]
-    },
-    {
-      "name": "Sky Sport 254 Daddy",
-      "logo": "https://iili.io/dH98yUN.png",
-      "group": "Italy",
-      "streams": [
-        {"name": "DaddyLive", "provider": "daddy", "priority": 1, "query": "Sky Calcio 4 (254) Italy", "url": ""}
-      ]
-    },
-    {
       "name": "DAZN 1 Daddy",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7c/DAZN_1_logo.png",
       "group": "Italy",

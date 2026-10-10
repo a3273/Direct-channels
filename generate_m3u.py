@@ -171,15 +171,39 @@ def main():
                 f'{m3u_escape(label)}'
             )
 
+            # Header completi per VLC
             headers = result.get("headers", {})
             if isinstance(headers, dict):
+                
+                # User-Agent
                 user_agent = clean(headers.get("User-Agent"))
-                referrer = clean(headers.get("Referer"))
-
                 if user_agent:
                     output.append("#EXTVLCOPT:http-user-agent=" + user_agent)
+                
+                # Referer
+                referrer = clean(headers.get("Referer"))
                 if referrer:
                     output.append("#EXTVLCOPT:http-referrer=" + referrer)
+                
+                # Origin
+                origin = clean(headers.get("Origin"))
+                if origin:
+                    output.append("#EXTVLCOPT:http-origin=" + origin)
+                
+                # Accept
+                accept = clean(headers.get("Accept"))
+                if accept:
+                    output.append("#EXTVLCOPT:http-header=Accept:" + accept)
+                
+                # Accept-Language
+                accept_lang = clean(headers.get("Accept-Language"))
+                if accept_lang:
+                    output.append("#EXTVLCOPT:http-header=Accept-Language:" + accept_lang)
+                
+                # Cookie se presente
+                cookie = clean(headers.get("Cookie"))
+                if cookie:
+                    output.append("#EXTVLCOPT:http-cookie=" + cookie)
 
             output.append(stream_url)
 
@@ -202,4 +226,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-          
+    

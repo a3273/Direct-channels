@@ -3,8 +3,8 @@
     "channels_total": 17,
     "channels_enabled": 17,
     "streams_total": 17,
-    "streams_generated": 0,
-    "streams_failed": 17
+    "streams_generated": 17,
+    "streams_failed": 0
   },
   "channels": {
     "Sky Sport 24 Daddy": {
@@ -15,8 +15,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 869"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium869%2Findex.m3u8%3F_%3D1791658215033"
         }
       ]
     },
@@ -28,8 +28,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 461"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium461%2Findex.m3u8%3F_%3D1791658216311"
         }
       ]
     },
@@ -41,8 +41,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 870"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium870%2Findex.m3u8%3F_%3D1791658217426"
         }
       ]
     },
@@ -54,8 +54,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 576"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium576%2Findex.m3u8%3F_%3D1791658218723"
         }
       ]
     },
@@ -67,8 +67,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 462"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium462%2Findex.m3u8%3F_%3D1791658219824"
         }
       ]
     },
@@ -80,8 +80,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 875"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium875%2Findex.m3u8%3F_%3D1791658221103"
         }
       ]
     },
@@ -93,8 +93,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 460"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium460%2Findex.m3u8%3F_%3D1791658222592"
         }
       ]
     },
@@ -106,8 +106,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 577"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium577%2Findex.m3u8%3F_%3D1791658223828"
         }
       ]
     },
@@ -119,8 +119,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 575"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium575%2Findex.m3u8%3F_%3D1791658225054"
         }
       ]
     },
@@ -132,8 +132,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 574"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium574%2Findex.m3u8%3F_%3D1791658226254"
         }
       ]
     },
@@ -145,8 +145,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 871"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium871%2Findex.m3u8%3F_%3D1791658227480"
         }
       ]
     },
@@ -158,8 +158,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 872"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium872%2Findex.m3u8%3F_%3D1791658228938"
         }
       ]
     },
@@ -171,8 +171,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 873"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium873%2Findex.m3u8%3F_%3D1791658230087"
         }
       ]
     },
@@ -184,8 +184,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 874"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium874%2Findex.m3u8%3F_%3D1791658231273"
         }
       ]
     },
@@ -197,8 +197,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 877"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium877%2Findex.m3u8%3F_%3D1791658232373"
         }
       ]
     },
@@ -210,8 +210,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 878"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium878%2Findex.m3u8%3F_%3D1791658233712"
         }
       ]
     },
@@ -223,8 +223,8 @@
           "provider": "daddy",
           "priority": 1,
           "source_url_configured": false,
-          "status": "error",
-          "error": "Stream non trovato per canale 879"
+          "status": "resolved",
+          "url": "https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium879%2Findex.m3u8%3F_%3D1791658234997"
         }
       ]
     }

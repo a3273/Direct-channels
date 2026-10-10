@@ -1,0 +1,232 @@
+{
+  "summary": {
+    "channels_total": 17,
+    "channels_enabled": 17,
+    "streams_total": 17,
+    "streams_generated": 17,
+    "streams_failed": 0
+  },
+  "channels": {
+    "Sky Sport 24 Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-869.php"
+        }
+      ]
+    },
+    "Sky Sport Uno Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-461.php"
+        }
+      ]
+    },
+    "Sky Sport Calcio Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-870.php"
+        }
+      ]
+    },
+    "Sky Sport Tennis Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-576.php"
+        }
+      ]
+    },
+    "Sky Sport Arena Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-462.php"
+        }
+      ]
+    },
+    "Sky Sport Basket Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-875.php"
+        }
+      ]
+    },
+    "Sky Sport Max Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-460.php"
+        }
+      ]
+    },
+    "Sky Sport F1 Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-577.php"
+        }
+      ]
+    },
+    "Sky Sport MotoGP Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-575.php"
+        }
+      ]
+    },
+    "Sky Sport Golf Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-574.php"
+        }
+      ]
+    },
+    "Sky Sport 251 Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-871.php"
+        }
+      ]
+    },
+    "Sky Sport 252 Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-872.php"
+        }
+      ]
+    },
+    "Sky Sport 253 Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-873.php"
+        }
+      ]
+    },
+    "Sky Sport 254 Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-874.php"
+        }
+      ]
+    },
+    "DAZN 1 Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-877.php"
+        }
+      ]
+    },
+    "Eurosport 1 Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-878.php"
+        }
+      ]
+    },
+    "Eurosport 2 Daddy": {
+      "enabled": true,
+      "streams": [
+        {
+          "name": "DaddyLive",
+          "provider": "daddy",
+          "priority": 1,
+          "source_url_configured": false,
+          "status": "resolved",
+          "url": "https://dlive.sx/cast/stream-879.php"
+        }
+      ]
+    }
+  }
+}

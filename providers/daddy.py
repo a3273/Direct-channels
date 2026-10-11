@@ -1,12 +1,17 @@
 """
-DaddyLive provider - estrae l'm3u8 reale da bembed.sbs e lo instrada
-attraverso il Cloudflare Worker che spacchetta i segmenti travestiti.
+DaddyLive provider - estrazione catena bembed.sbs + URL stabile self-healing.
+
+Discovery: direct-first, fallback proxy CORS pubblici.
+Playlist: URL stabili /live?ch=<id> -> il Worker Cloudflare risolve
+l'edge attuale a ogni refresh del manifest (no piu' freeze da host morti).
 """
 
 import re
-import time
+import base64
+import json
 import logging
-from urllib.parse import quote
+import time
+from urllib.parse import quote, urlparse
 
 import requests
 from requests.adapters import HTTPAdapter
@@ -18,6 +23,7 @@ BASE = "https://dlive.sx"
 MIRRORS = ["https://dlive.sx", "https://dlstreams.st"]
 EMBED_TEMPLATE = "https://bembed.sbs/premiumtv/daddy.php?id={cid}"
 PLAYER_REFERER = "https://dlive.sx/stream/stream-{cid}.php"
+EMBED_REFERER = "https://bembed.sbs/"
 
 # IL TUO WORKER CLOUDFLARE
 WORKER_BASE = "https://daddy-deploy.simo-scorrano-11.workers.dev"
@@ -28,7 +34,7 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-# Fallback gratuiti solo se il direct fallisce (GitHub IP bloccati)
+# Fallback gratuiti solo se il direct fallisce
 DISCOVERY_PROXIES = [
     lambda u: "https://api.allorigins.win/raw?url=" + quote(u, safe=""),
     lambda u: "https://api.codetabs.com/v1/proxy?quest=" + u,
@@ -37,6 +43,12 @@ DISCOVERY_PROXIES = [
 ]
 
 _channel_cache = None
+_edge_map = {}
+
+
+def get_edge_map():
+    """Restituisce la mappa id_canale -> URL edge (per edge.json di fallback)."""
+    return dict(_edge_map)
 
 
 def _get_session() -> requests.Session:
@@ -130,42 +142,56 @@ def _extract_real_stream(cid: int) -> str:
     html = _fetch(embed_url, referer=referer, must_contain="const SRC").text
 
     m = re.search(r'const\s+SRC\s*=\s*"([^"]+?\.m3u8)"', html)
-    if not m:
-        raise RuntimeError(f"const SRC non trovato per canale {cid}")
+    if m:
+        src = m.group(1)
+        sep = "&" if "?" in src else "?"
+        return f"{src}{sep}_={int(time.time() * 1000)}"
 
-    src = m.group(1)
-    sep = "&" if "?" in src else "?"
-    src = f"{src}{sep}_={int(time.time() * 1000)}"
-    return src
+    # Fallback: regex m3u8 diretta nell'embed
+    m3 = re.search(r'https?://[^\s"\'<>]+\.m3u8[^\s"\'<>]*', html)
+    if m3:
+        return m3.group(0)
+
+    raise RuntimeError(f"Stream non trovato per canale {cid}")
 
 
 def get_stream(channel_name: str) -> dict:
+    """Risolve id + URL edge attuale e lo traccia in _edge_map."""
     channels = fetch_channel_list()
     cid = find_channel_id(channels, channel_name)
     real_url = _extract_real_stream(cid)
 
-    # Instrada TUTTO attraverso il worker (manifest + segmenti)
-    worker_url = f"{WORKER_BASE}/?u={quote(real_url, safe='')}"
+    # Traccia per edge.json (senza cache-buster)
+    _edge_map[str(cid)] = real_url.split("?_=")[0]
 
-    logger.info("STREAM VIA WORKER: %s", worker_url[:80])
+    logger.info("STREAM REALE: %s", real_url[:80])
 
     return {
-        "url": worker_url,
-        "headers": {},  # Il worker gestisce tutto da solo
+        "url": real_url,
+        "cid": cid,
+        "headers": {
+            "User-Agent": HEADERS["User-Agent"],
+            "Referer": EMBED_REFERER,
+            "Origin": "https://assetrage.net",
+        },
         "source": "daddylive",
         "channel_id": cid,
     }
 
 
 def resolve(channel: dict, stream: dict) -> dict:
+    """URL STABILE: il Worker self-healing risolve l'edge al volo."""
     query = stream.get("query") or channel.get("name", "")
     result = get_stream(query)
 
+    stable_url = f"{WORKER_BASE}/live?ch={result['cid']}"
+
     return {
-        "url": result["url"],
+        "url": stable_url,
         "provider": "DaddyLive",
         "quality": "HD",
-        "headers": result.get("headers", {}),
+        "headers": {},
+        "extra_vlcopts": [],
         "proxy": "direct",
         "proxy_required": False,
     }

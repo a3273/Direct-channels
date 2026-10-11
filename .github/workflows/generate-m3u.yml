@@ -36,6 +36,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull --rebase --autostash || true
-          git add -f playlist.m3u status.json
+          git add -f playlist.m3u status.json edge.json
           git commit -m "Update playlist $(date -u +%H:%M) [skip ci]" --allow-empty
           git push || (git pull --rebase --autostash && git push)

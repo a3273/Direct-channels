@@ -1,27 +1,27 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="Sky Sport 24 Daddy" tvg-name="Sky Sport 24 Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-24-it.png" group-title="Italy",Sky Sport 24 Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium869%2Findex.m3u8%3F_%3D1791724472887
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=869
 #EXTINF:-1 tvg-id="Sky Sport Uno Daddy" tvg-name="Sky Sport Uno Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-uno-it.png" group-title="Italy",Sky Sport Uno Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium461%2Findex.m3u8%3F_%3D1791724474311
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=461
 #EXTINF:-1 tvg-id="Sky Sport Calcio Daddy" tvg-name="Sky Sport Calcio Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-calcio-it.png" group-title="Italy",Sky Sport Calcio Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium870%2Findex.m3u8%3F_%3D1791724475990
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=870
 #EXTINF:-1 tvg-id="Sky Sport Tennis Daddy" tvg-name="Sky Sport Tennis Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-tennis-it.png" group-title="Italy",Sky Sport Tennis Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium576%2Findex.m3u8%3F_%3D1791724477317
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=576
 #EXTINF:-1 tvg-id="Sky Sport Arena Daddy" tvg-name="Sky Sport Arena Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-arena-it.png" group-title="Italy",Sky Sport Arena Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium462%2Findex.m3u8%3F_%3D1791724478761
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=462
 #EXTINF:-1 tvg-id="Sky Sport Basket Daddy" tvg-name="Sky Sport Basket Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-nba-it.png" group-title="Italy",Sky Sport Basket Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium875%2Findex.m3u8%3F_%3D1791724480258
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=875
 #EXTINF:-1 tvg-id="Sky Sport Max Daddy" tvg-name="Sky Sport Max Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-max-it.png" group-title="Italy",Sky Sport Max Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium460%2Findex.m3u8%3F_%3D1791724481818
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=460
 #EXTINF:-1 tvg-id="Sky Sport F1 Daddy" tvg-name="Sky Sport F1 Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-f1-it.png" group-title="Italy",Sky Sport F1 Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium577%2Findex.m3u8%3F_%3D1791724483187
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=577
 #EXTINF:-1 tvg-id="Sky Sport MotoGP Daddy" tvg-name="Sky Sport MotoGP Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-motogp-it.png" group-title="Italy",Sky Sport MotoGP Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium575%2Findex.m3u8%3F_%3D1791724484512
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=575
 #EXTINF:-1 tvg-id="Sky Sport Golf Daddy" tvg-name="Sky Sport Golf Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-golf-it.png" group-title="Italy",Sky Sport Golf Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium574%2Findex.m3u8%3F_%3D1791724485809
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=574
 #EXTINF:-1 tvg-id="DAZN 1 Daddy" tvg-name="DAZN 1 Daddy" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/DAZN_1_logo.png" group-title="Italy",DAZN 1 Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium877%2Findex.m3u8%3F_%3D1791724487239
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=877
 #EXTINF:-1 tvg-id="Eurosport 1 Daddy" tvg-name="Eurosport 1 Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/spain/eurosport-1-es.png" group-title="Italy",Eurosport 1 Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium878%2Findex.m3u8%3F_%3D1791724488585
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=878
 #EXTINF:-1 tvg-id="Eurosport 2 Daddy" tvg-name="Eurosport 2 Daddy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/spain/eurosport-2-es.png" group-title="Italy",Eurosport 2 Daddy
-https://daddy-deploy.simo-scorrano-11.workers.dev/?u=https%3A%2F%2Fedge.cowedd4855ws.sbs%2Fpremium879%2Findex.m3u8%3F_%3D1791724489920
+https://daddy-deploy.simo-scorrano-11.workers.dev/live?ch=879

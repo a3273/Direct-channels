@@ -1,3 +1,10 @@
+"""
+Generatore playlist M3U - architettura provider (Direct-channels).
+
+Legge channels.json, carica providers.<nome>, scrive playlist.m3u,
+status.json e edge.json (fallback per il Worker self-healing).
+"""
+
 import importlib
 import json
 from pathlib import Path
@@ -6,6 +13,7 @@ from pathlib import Path
 CHANNELS_FILE = Path("channels.json")
 PLAYLIST_FILE = Path("playlist.m3u")
 STATUS_FILE = Path("status.json")
+EDGE_FILE = Path("edge.json")
 
 
 def clean(value) -> str:
@@ -106,7 +114,6 @@ def main():
                         "url": source_url,
                         "provider": stream_name or "Direct",
                         "quality": "HD",
-                        "priority": stream.get("priority", 999),
                         "headers": {}
                     }
                 else:
@@ -171,43 +178,29 @@ def main():
                 f'{m3u_escape(label)}'
             )
 
-            # Header completi per VLC
             headers = result.get("headers", {})
             if isinstance(headers, dict):
-                
-                # User-Agent
                 user_agent = clean(headers.get("User-Agent"))
                 if user_agent:
                     output.append("#EXTVLCOPT:http-user-agent=" + user_agent)
-                
-                # Referer
-                referrer = clean(headers.get("Referer"))
-                if referrer:
-                    output.append("#EXTVLCOPT:http-referrer=" + referrer)
-                
-                # Origin
-                origin = clean(headers.get("Origin"))
-                if origin:
-                    output.append("#EXTVLCOPT:http-origin=" + origin)
-                
-                # Accept
-                accept = clean(headers.get("Accept"))
-                if accept:
-                    output.append("#EXTVLCOPT:http-header=Accept:" + accept)
-                
-                # Accept-Language
-                accept_lang = clean(headers.get("Accept-Language"))
-                if accept_lang:
-                    output.append("#EXTVLCOPT:http-header=Accept-Language:" + accept_lang)
-                
-                # Cookie se presente
-                cookie = clean(headers.get("Cookie"))
-                if cookie:
-                    output.append("#EXTVLCOPT:http-cookie=" + cookie)
+
+            for opt in result.get("extra_vlcopts", []):
+                output.append(f"#EXTVLCOPT:{clean(opt)}")
 
             output.append(stream_url)
 
         status["channels"][channel_name] = channel_status
+
+    # edge.json: fallback per il Worker self-healing
+    try:
+        import providers.daddy as daddy_mod
+        edge_map = daddy_mod.get_edge_map()
+        if edge_map:
+            with EDGE_FILE.open("w", encoding="utf-8") as f:
+                json.dump(edge_map, f)
+            print(f"edge.json: {len(edge_map)} canali mappati")
+    except Exception as e:
+        print(f"edge.json non scritto: {e}")
 
     with PLAYLIST_FILE.open("w", encoding="utf-8", newline="\n") as handle:
         handle.write("\n".join(output) + "\n")
@@ -226,4 +219,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

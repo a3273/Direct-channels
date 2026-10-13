@@ -171,7 +171,7 @@ def resolve(channel: dict, stream: dict) -> dict:
         "provider": "DaddyLive",
         "quality": "HD",
         "headers": {},
-        "extra_vlcopts": [],
+        "extra_vlcopts": ["network-caching=10000"],
         "proxy": "direct",
         "proxy_required": False,
     }

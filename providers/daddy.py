@@ -1,7 +1,9 @@
 """
 DaddyLive provider - risoluzione nome->ID + URL stabile self-healing.
 
-Discovery: direct-first, fallback proxy CORS pubblici.
+Discovery: direct-first; fallback proxy CORS CON CACHE-BUSTER.
+I proxy pubblici (allorigins, codetabs...) servono copie CACHATE delle pagine:
+senza cache-buster edge.json si congela con URL vecchi e morti.
 Playlist: URL stabili /live?ch=<id> -> il Val Val.town risolve
 l'edge attuale a ogni refresh del manifest (unwrap segmenti incluso).
 """
@@ -30,7 +32,7 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-# Fallback gratuiti solo se il direct fallisce
+# Fallback gratuiti solo se il direct fallisce (con cache-buster, altrimenti servono pagine congelate)
 DISCOVERY_PROXIES = [
     lambda u: "https://api.allorigins.win/raw?url=" + quote(u, safe=""),
     lambda u: "https://api.codetabs.com/v1/proxy?quest=" + u,
@@ -48,7 +50,7 @@ def get_edge_map():
 
 
 def _fetch(url: str, referer: str = None, timeout: int = 12, must_contain: str = None) -> requests.Response:
-    """Direct prima; fallback proxy CORS pubblici."""
+    """Direct prima; fallback proxy CORS con cache-buster anti-copie-congelate."""
     headers = dict(HEADERS)
     if referer:
         headers["Referer"] = referer
@@ -63,7 +65,8 @@ def _fetch(url: str, referer: str = None, timeout: int = 12, must_contain: str =
 
     for make_proxy in DISCOVERY_PROXIES:
         try:
-            r = requests.get(make_proxy(url), headers=headers, timeout=timeout + 5)
+            busted = url + ("&" if "?" in url else "?") + "nocache=" + str(int(time.time() * 1000))
+            r = requests.get(make_proxy(busted), headers=headers, timeout=timeout + 5)
             if r.status_code == 200 and len(r.text) > 50:
                 if must_contain is None or must_contain in r.text:
                     return r
